@@ -36,5 +36,18 @@
     <div class="cky-audit-table-element"></div>
     <!-- /wp:html -->
 </body>
+<script>
+var ckyoverlay = document.createElement('div');
+ckyoverlay.setAttribute("class", "cky-overlay");
 
+window.addEventListener("load", function () {
+  var ckyConsent = document.getElementById('cky-consent');
+  if(ckyConsent) {
+    ckyConsent.parentNode.insertBefore(ckyoverlay, ckyConsent.nextSibling);    
+  }
+  document.getElementById("cky-btn-accept").addEventListener("click", function() {
+    ckyoverlay.remove(ckyoverlay.selectedIndex);
+  });
+});
+</script>
 </html>
