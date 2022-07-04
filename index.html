@@ -18,10 +18,10 @@
   <button style="background: rgb(0, 128, 96)">new-1</button>
  <div class="cky-audit-table-element"></div>
 </body>
- <script>
+<script>
       window.addEventListener("load", function () {
-        waitForElement('[data-cky-tag="settings-button"]', function (element) {
-          console.log(element);
+        waitForElement('[data-cky-tag="notice"]', function (element) {
+          element.tabIndex = -1;
           element.focus();
         });
       });
@@ -33,7 +33,5 @@
           waitForElement(selector, callback);
         }, 500);
       }
-
-
-</script>
+    </script>
 </html>
