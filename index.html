@@ -19,12 +19,20 @@
  <div class="cky-audit-table-element"></div>
 </body>
  <script>
-//     document.getElementById("firstButton").focus();
-//       document.querySelector('.first-btn').focus();
-document.body.onload = function() {
-//  document.querySelector('.first-btn').focus();
-    document.querySelectorAll(".cky-consent-bar")[0].tabIndex = 0;
-document.querySelectorAll('.cky-consent-bar')[0].focus();
+      window.addEventListener("load", function () {
+        waitForElement('[data-cky-tag="settings-button"]', function (element) {
+          console.log(element);
+          element.focus();
+        });
+      });
+
+      function waitForElement(selector, callback) {
+        const element = document.querySelector(selector);
+        if (element) return callback(element);
+        setTimeout(function () {
+          waitForElement(selector, callback);
+        }, 500);
+      }
 }
 
 </script>
