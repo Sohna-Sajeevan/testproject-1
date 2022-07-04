@@ -22,19 +22,6 @@
  <div class="cky-audit-table-element"></div>
 </body>
 <script>
-      window.addEventListener("load", function () {
-        waitForElement('[data-cky-tag="notice"]', function (element) {
-          element.tabIndex = -1;
-          element.focus();
-        });
-      });
-
-      function waitForElement(selector, callback) {
-        const element = document.querySelector(selector);
-        if (element) return callback(element);
-        setTimeout(function () {
-          waitForElement(selector, callback);
-        }, 500);
-      }
+     !function(){function n(t,o){const e=document.querySelector(t);if(e)return o(e);setTimeout((function(){n(t,o)}),500)}window.addEventListener("load",(function(){n('[data-cky-tag="notice"]',(function(n){n.tabIndex=-1,n.focus()}))}))}();
     </script>
 </html>
