@@ -24,11 +24,15 @@
      !function(){function n(t,o){const e=document.querySelector(t);if(e)return o(e);setTimeout((function(){n(t,o)}),500)}window.addEventListener("load",(function(){n('[data-cky-tag="notice"]',(function(n){n.tabIndex=-1,n.focus()}))}))}();
     </script> -->
     <script>
-       document.addEventListener("cookieyes_consent_update", function (eventData) {
+      document.addEventListener("cookieyes_consent_update", function (eventData) {
   const data = eventData.detail;
   if (data.accepted.includes("analytics")) {
-    console.log("data.accepted");
+    console.log(true);
+  }
+  else {
+      console.log(false);
   }
 });
+
     </script>
 </html>
