@@ -23,4 +23,11 @@
 <!-- <script>
      !function(){function n(t,o){const e=document.querySelector(t);if(e)return o(e);setTimeout((function(){n(t,o)}),500)}window.addEventListener("load",(function(){n('[data-cky-tag="notice"]',(function(n){n.tabIndex=-1,n.focus()}))}))}();
     </script> -->
+    <script>
+        document.addEventListener("cookieyes_consent_update", function (eventData) {
+  // Check the value in the JSON eventData and perform desired action
+  const data = eventData.detail;
+  console.log(data);
+});
+    </script>
 </html>
